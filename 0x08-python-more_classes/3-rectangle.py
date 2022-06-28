@@ -55,6 +55,8 @@ class Rectangle:
 
     def perimeter(self):
         """Returns the permeter of the rectangle"""
+        if self.__height == 0 or self.__width == 0:
+            return 0
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
@@ -62,6 +64,9 @@ class Rectangle:
         text = ""
         w = self.__width
         h = self.__height
+
+        if w == 0 or h == 0:
+            return ""
 
         if h > 0:
             text = "#" * w
